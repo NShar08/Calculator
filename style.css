@@ -1,0 +1,127 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.calculator {
+    background: #2d2d2d;
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    display: grid;
+    grid-template-columns: repeat(4, 80px);
+    grid-gap: 10px;
+    max-width: 360px;
+}
+
+.display {
+    grid-column: 1 / -1;
+    background: #1a1a1a;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: right;
+    margin-bottom: 10px;
+    min-height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+.previous-operand {
+    color: #858585;
+    font-size: 20px;
+    min-height: 25px;
+}
+
+.current-operand {
+    color: #ffffff;
+    font-size: 32px;
+    font-weight: bold;
+}
+
+button {
+    border: none;
+    border-radius: 10px;
+    font-size: 24px;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-weight: 500;
+    height: 60px;
+}
+
+button:hover {
+    transform: scale(1.05);
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+.number {
+    background: #505050;
+    color: #ffffff;
+}
+
+.number:hover {
+    background: #606060;
+}
+
+.operator {
+    background: #ff9500;
+    color: #ffffff;
+}
+
+.operator:hover {
+    background: #ffb143;
+}
+
+.span-two {
+    grid-column: span 2;
+    background: #a6a6a6;
+    color: #1a1a1a;
+}
+
+.span-two:hover {
+    background: #c0c0c0;
+}
+
+.equals {
+    background: #34c759;
+    color: #ffffff;
+}
+
+.equals:hover {
+    background: #5dd57a;
+}
+
+@media (max-width: 400px) {
+    .calculator {
+        grid-template-columns: repeat(4, 70px);
+    }
+
+    button {
+        height: 50px;
+        font-size: 20px;
+    }
+
+    .current-operand {
+        font-size: 28px;
+    }
+
+    .previous-operand {
+        font-size: 18px;
+    }
+}
